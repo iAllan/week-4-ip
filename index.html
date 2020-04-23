@@ -12,20 +12,21 @@
   <body>
     <div class="container">
       <div class="card">
-        <div class="jumbotron">
+        <img
+          class="card-img-top"
+          src="images/h-background.jpg"
+          alt="card image"
+        />
+        <div class="card-img-overlay">
           <h1>Welcome to A+ Pizza's</h1>
-        </div>
-        <div class="card-body">
+          <br />
           <p>Quality pizza every time.</p>
         </div>
       </div>
       <div class="row">
         <div class="col-md-3">
           <div class="card">
-            <img
-              src="https://www.desktopbackground.org/download/720x1280/2011/07/19/236593_2880x1800-light-green-solid-color-background-jpg_2880x1800_h.jpg"
-              alt="white image"
-            />
+            <img src="images/green.png" alt="green image" />
           </div>
           <!--Add js to reveal Italian flag background color on mouse hover-->
         </div>
@@ -62,61 +63,15 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-4">
-              <!--Insert image here-->
-              <h5>
-                Small <br />
-                (8 inch diameter)
-              </h5>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="size"
-                  id="small"
-                  value="option1"
-                  checked
-                  required
-                />
-                <label class="form-check-label" for="small"> $6.00 </label>
-              </div>
+            <div class="col-md-6">
+              <select class="form-control form-control-lg" name="size">
+                <option value="6.00">Small</option>
+                <option value="8.00">Medium</option>
+                <option value="10.00">Large</option>
+              </select>
             </div>
-            <div class="col-md-4">
-              <!--Insert image here-->
-              <h5>
-                Medium <br />
-                (12 inch diameter)
-              </h5>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="size"
-                  id="medium"
-                  value="option2"
-                />
-                <label class="form-check-label" for="medium">
-                  $8.00
-                </label>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <!--Insert image here-->
-              <h5>
-                Large <br />
-                (16 inch diameter)
-              </h5>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="size"
-                  id="large"
-                  value="option3"
-                />
-                <label class="form-check-label" for="large">
-                  $10.00
-                </label>
+            <div class="col-md-6">
+              <h5>Price: $ <span id="size-value"></span></h5>
             </div>
           </div>
         </div>
@@ -127,54 +82,17 @@
         </div>
         <div class="card-body">
           <div class="row">
-            <div class="col-md-4">
-              <img src="https://www.kingarthurflour.com/sites/default/files/styles/featured_image/public/2020-03/super-fast-thin-crust-pizza.jpg?itok=u3Xodz0C" alt="thin-crust pizza">
-              <h5>Thin</h5>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="crust"
-                  id="thin"
-                  value="option1"
-                  required
-                  checked
-                />
-                <label class="form-check-label" for="thin">
-                  no extra cost
-                </label>
-              </div>
+            <div class="col-md-6">
+              <select class="form-control form-control-lg" name="crust">
+                <option value="0.00" id="thin-crust">Thin</option>
+                <option value="0.60" id="thin-crust">Stuffed Cheese</option>
+                <option value="0.50" id="thin-crust">Thick</option>
+              </select>
             </div>
-            <div class="col-md-4">
-              <img src="https://img1.mashed.com/img/gallery/the-truth-about-pizza-huts-stuffed-crust-pizza/intro-1571237396.jpg" alt="stuffed-crust pizza">
-              <h5>Stuffed Cheese</h5>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="crust"
-                  id="thick"
-                  value="option2"
-                />
-                <label class="form-check-label" for="thick">
-                  $0.60
-                </label>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <img src="https://d332juqdd9b8hn.cloudfront.net/wp-content/uploads/2019/08/lehmann-sept19-895x597.jpg" alt="thick-crust pizza">
-              <h5>Thick</h5>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="crust"
-                  id="thick"
-                  value="option3"
-                />
-                <label class="form-check-label" for="thick">
-                  $0.50
-                </label>
+            <div class="col-md-6">
+              <h5>Price:</h5>
+              <div id="crust-price">
+                <ul></ul>
               </div>
             </div>
           </div>
@@ -186,13 +104,16 @@
         </div>
         <div class="card-body">
           <p>
-            Please Note: All pizza's start with a margarita base (pizza sauce and
-            cheese).
+            Please Note: All pizza's start with a margarita base (pizza sauce
+            and cheese).
           </p>
           <br />
           <div class="row">
             <div class="col-md-3">
-              <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AABrZtf.img?h=630&w=1200&m=6&q=60&o=t&l=f&f=jpg&x=2580&y=1346" alt="tomatoes">
+              <img
+                src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AABrZtf.img?h=630&w=1200&m=6&q=60&o=t&l=f&f=jpg&x=2580&y=1346"
+                alt="tomatoes"
+              />
               <h5>Tomatoes</h5>
               <div class="form-check">
                 <input
@@ -200,7 +121,7 @@
                   type="checkbox"
                   name="topping"
                   id="tomatoes"
-                  value="option1"
+                  value="0.10"
                 />
                 <label class="form-check-label" for="tomatoes">
                   $0.10
@@ -208,7 +129,10 @@
               </div>
             </div>
             <div class="col-md-3">
-              <img src="https://nutritionfacts.org/app/uploads/2019/01/5884349332_95d70f789d_o.jpg" alt="olives">
+              <img
+                src="https://nutritionfacts.org/app/uploads/2019/01/5884349332_95d70f789d_o.jpg"
+                alt="olives"
+              />
               <h5>Olives</h5>
               <div class="form-check">
                 <input
@@ -216,7 +140,7 @@
                   type="checkbox"
                   name="topping"
                   id="olives"
-                  value="option2"
+                  value="0.10"
                 />
                 <label class="form-check-label" for="olives">
                   $0.10
@@ -224,7 +148,10 @@
               </div>
             </div>
             <div class="col-md-3">
-              <img src="https://www.bbcgoodfood.com/sites/default/files/guide/guide-image/2013/06/the-health-benefits-of-onions-main-image-700-350.jpg" alt="onions">
+              <img
+                src="https://www.bbcgoodfood.com/sites/default/files/guide/guide-image/2013/06/the-health-benefits-of-onions-main-image-700-350.jpg"
+                alt="onions"
+              />
               <h5>Onions</h5>
               <div class="form-check">
                 <input
@@ -232,7 +159,7 @@
                   type="checkbox"
                   name="topping"
                   id="onions"
-                  value="option3"
+                  value="0.10"
                 />
                 <label class="form-check-label" for="onions">
                   $0.10
@@ -240,7 +167,10 @@
               </div>
             </div>
             <div class="col-md-3">
-              <img src="https://www.seededatthetable.com/wp-content/uploads/2010/09/5010760134_be11b49c1b.jpg" alt="pineapple">
+              <img
+                src="https://www.seededatthetable.com/wp-content/uploads/2010/09/5010760134_be11b49c1b.jpg"
+                alt="pineapple"
+              />
               <h5>Pineapples</h5>
               <div class="form-check">
                 <input
@@ -248,7 +178,7 @@
                   type="checkbox"
                   name="topping"
                   id="pineapples"
-                  value="option4"
+                  value="0.10"
                 />
                 <label class="form-check-label" for="pineapples">
                   $0.10
@@ -259,7 +189,10 @@
           <br />
           <div class="row">
             <div class="col-md-3">
-              <img src="https://miro.medium.com/max/800/1*ZcZ54dLnOdZfOz6TtwgXFA.jpeg" alt="chillies">
+              <img
+                src="https://miro.medium.com/max/800/1*ZcZ54dLnOdZfOz6TtwgXFA.jpeg"
+                alt="chillies"
+              />
               <h5>Chillies</h5>
               <div class="form-check">
                 <input
@@ -267,7 +200,7 @@
                   type="checkbox"
                   name="topping"
                   id="chillies"
-                  value="option5"
+                  value="0.50"
                 />
                 <label class="form-check-label" for="chillies">
                   $0.50
@@ -275,7 +208,10 @@
               </div>
             </div>
             <div class="col-md-3">
-              <img src="https://irepo.primecp.com/2016/03/258617/recipe-4014_Large400_ID-1449045.jpg?v=1449045" alt="cheese">
+              <img
+                src="https://irepo.primecp.com/2016/03/258617/recipe-4014_Large400_ID-1449045.jpg?v=1449045"
+                alt="cheese"
+              />
               <h5>Cheese</h5>
               <div class="form-check">
                 <input
@@ -283,7 +219,7 @@
                   type="checkbox"
                   name="topping"
                   id="cheese"
-                  value="option6"
+                  value="0.50"
                 />
                 <label class="form-check-label" for="cheese">
                   $0.50
@@ -291,7 +227,10 @@
               </div>
             </div>
             <div class="col-md-3">
-              <img src="https://cdn.shopify.com/s/files/1/0018/9530/1180/products/swcorn_1200x1200.jpg?v=1571708476" alt="corn">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0018/9530/1180/products/swcorn_1200x1200.jpg?v=1571708476"
+                alt="corn"
+              />
               <h5>Corn</h5>
               <div class="form-check">
                 <input
@@ -299,7 +238,7 @@
                   type="checkbox"
                   name="topping"
                   id="corn"
-                  value="option7"
+                  value="0.50"
                 />
                 <label class="form-check-label" for="corn">
                   $0.50
@@ -307,7 +246,10 @@
               </div>
             </div>
             <div class="col-md-3">
-              <img src="https://www.almanac.com/sites/default/files/image_nodes/bell-peppers-assorted-crop.jpg" alt="bell peppers">
+              <img
+                src="https://www.almanac.com/sites/default/files/image_nodes/bell-peppers-assorted-crop.jpg"
+                alt="bell peppers"
+              />
               <h5>Peppers</h5>
               <div class="form-check">
                 <input
@@ -315,7 +257,7 @@
                   type="checkbox"
                   name="topping"
                   id="peppers"
-                  value="option8"
+                  value="0.50"
                 />
                 <label class="form-check-label" for="peppers">
                   $0.50
@@ -326,7 +268,10 @@
           <br />
           <div class="row">
             <div class="col-md-3">
-              <img src="https://gorans.fi/images/tuotteet/jauheliha-pre-cooked.png" alt="minced-meat">
+              <img
+                src="https://gorans.fi/images/tuotteet/jauheliha-pre-cooked.png"
+                alt="minced-meat"
+              />
               <h5>Minced Meat (Beef)</h5>
               <div class="form-check">
                 <input
@@ -334,7 +279,7 @@
                   type="checkbox"
                   name="topping"
                   id="minced-meat"
-                  value="option9"
+                  value="1.50"
                 />
                 <label class="form-check-label" for="minced-meat">
                   $1.50
@@ -342,7 +287,10 @@
               </div>
             </div>
             <div class="col-md-3">
-              <img src="https://www.pngitem.com/pimgs/m/130-1307085_sliced-ham-png-transparent-image-turkey-slice-png.png" alt="ham">
+              <img
+                src="https://www.pngitem.com/pimgs/m/130-1307085_sliced-ham-png-transparent-image-turkey-slice-png.png"
+                alt="ham"
+              />
               <h5>Ham</h5>
               <div class="form-check">
                 <input
@@ -350,7 +298,7 @@
                   type="checkbox"
                   name="topping"
                   id="ham"
-                  value="option10"
+                  value="1.50"
                 />
                 <label class="form-check-label" for="ham">
                   $1.50
@@ -358,7 +306,10 @@
               </div>
             </div>
             <div class="col-md-3">
-              <img src="https://cdn10.bigcommerce.com/s-5pwjrn/products/14/images/22/16oz_Pepperoni_Stick_DSC_0001__85102.1446138804.1000.1000.jpg?c=2" alt="pepperoni">
+              <img
+                src="https://cdn10.bigcommerce.com/s-5pwjrn/products/14/images/22/16oz_Pepperoni_Stick_DSC_0001__85102.1446138804.1000.1000.jpg?c=2"
+                alt="pepperoni"
+              />
               <h5>Pepperoni</h5>
               <div class="form-check">
                 <input
@@ -366,7 +317,7 @@
                   type="checkbox"
                   name="topping"
                   id="pepperoni"
-                  value="option11"
+                  value="1.50"
                 />
                 <label class="form-check-label" for="pepperoni">
                   $1.50
@@ -374,7 +325,10 @@
               </div>
             </div>
             <div class="col-md-3">
-              <img src="https://cdn.schwans.com/media/images/products/56238-1-1540.jpg" alt="chicken-strips">
+              <img
+                src="https://cdn.schwans.com/media/images/products/56238-1-1540.jpg"
+                alt="chicken-strips"
+              />
               <h5>Chicken Strips</h5>
               <div class="form-check">
                 <input
@@ -382,7 +336,7 @@
                   type="checkbox"
                   name="topping"
                   id="chicken-strips"
-                  value="option12"
+                  value="1.50"
                 />
                 <label class="form-check-label" for="chicken-strips">
                   $1.50
@@ -393,7 +347,10 @@
           <br />
           <div class="row">
             <div class="col-md-3">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSQCIKYraiSKR2d2EbRq4GnQi_7QvV4OFxrZIfA8PIJ-nr8FoeG&usqp=CAU" alt="steak-strips">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSQCIKYraiSKR2d2EbRq4GnQi_7QvV4OFxrZIfA8PIJ-nr8FoeG&usqp=CAU"
+                alt="steak-strips"
+              />
               <h5>Steak Strips</h5>
               <div class="form-check">
                 <input
@@ -401,7 +358,7 @@
                   type="checkbox"
                   name="topping"
                   id="steak-strips"
-                  value="option13"
+                  value="2.00"
                 />
                 <label class="form-check-label" for="steak-strips">
                   $2.00
@@ -409,7 +366,10 @@
               </div>
             </div>
             <div class="col-md-3">
-              <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2009/6/12/0/TM1E52_28396_s4x3.jpg.rend.hgtvcom.826.620.suffix/1547649043286.jpeg" alt="chicken-chunks">
+              <img
+                src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2009/6/12/0/TM1E52_28396_s4x3.jpg.rend.hgtvcom.826.620.suffix/1547649043286.jpeg"
+                alt="chicken-chunks"
+              />
               <h5>Chicken Chunks</h5>
               <div class="form-check">
                 <input
@@ -417,7 +377,7 @@
                   type="checkbox"
                   name="topping"
                   id="chicken-chunks"
-                  value="option14"
+                  value="2.00"
                 />
                 <label class="form-check-label" for="chicken-chunks">
                   $2.00
@@ -425,7 +385,10 @@
               </div>
             </div>
             <div class="col-md-3">
-              <img src="https://thebakermama.com/wp-content/uploads/2018/08/fullsizeoutput_15a7c.jpg" alt="bacon">
+              <img
+                src="https://thebakermama.com/wp-content/uploads/2018/08/fullsizeoutput_15a7c.jpg"
+                alt="bacon"
+              />
               <h5>Bacon</h5>
               <div class="form-check">
                 <input
@@ -433,7 +396,7 @@
                   type="checkbox"
                   name="topping"
                   id="bacon"
-                  value="option15"
+                  value="1.50"
                 />
                 <label class="form-check-label" for="bacon">
                   $1.50
@@ -441,7 +404,10 @@
               </div>
             </div>
             <div class="col-md-3">
-              <img src="https://natashaskitchen.com/wp-content/uploads/2013/06/Grilled-Mushrooms-on-Skewers-8-600x400.jpg" alt="mushrooms">
+              <img
+                src="https://natashaskitchen.com/wp-content/uploads/2013/06/Grilled-Mushrooms-on-Skewers-8-600x400.jpg"
+                alt="mushrooms"
+              />
               <h5>Mushrooms</h5>
               <div class="form-check">
                 <input
@@ -449,7 +415,7 @@
                   type="checkbox"
                   name="topping"
                   id="mushrooms"
-                  value="option16"
+                  value="1.00"
                 />
                 <label class="form-check-label" for="mushrooms">
                   $1.00
